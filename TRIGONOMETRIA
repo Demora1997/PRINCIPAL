@@ -1,0 +1,90 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Ejercicios;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ *
+ * @author darwi
+ */
+public class TRIGONOMETRIA {
+
+    /**
+     * @param args the command line arguments
+     */
+    static void TRIGO()  throws IOException
+    {
+     BufferedReader bf=new BufferedReader(new InputStreamReader(System.in));
+        {
+
+        int operacion;
+        String soperacion,snum1;
+        double resultado,num1;
+        
+        System.out.println("Con que numero desea hacer la operacion");
+        snum1=bf.readLine();
+        num1=Double.parseDouble(snum1);
+        double AnguloenRadianes= Math.toRadians(num1);
+        
+        System.out.println("¿Que opcion desea? \n 1. Si desea calcular el Sen \n 2. Si desea calcular el Cos \n 3. Si desea calcular el Tan \n 4. Si desea calcular el Cot \n 5. Si desea calcular el Sec \n 6. Si desea calcular el Csc");
+        soperacion=bf.readLine();
+        operacion=Integer.parseInt(soperacion);
+             switch (operacion)
+        {
+            case 1:
+            {
+                System.out.println("Ha seleccionado Sen");
+                resultado = AnguloenRadianes = Math.sin(num1);
+                System.out.println("El resultado de Seno es \t"+resultado);
+                break;
+            }
+            case 2:
+            {
+                System.out.println("Ha seleccionado Cos");
+                resultado = AnguloenRadianes = Math.cos(num1);
+                System.out.println("El resultado de Coseno es \t"+resultado);
+                break;
+            }
+            case 3:
+            {
+                System.out.println("Ha seleccionado Tan");
+                resultado = AnguloenRadianes = Math.tan(num1);
+                System.out.println("El resultado de Tangente es \t"+resultado);
+                break;    
+            }
+            case 4:
+            {
+                System.out.println("Ha seleccionado Cot");
+                resultado = Math.cos(num1)/Math.sin(num1);
+                System.out.println("El resultado de Cotangente es \t"+resultado);
+                break; 
+                
+            }
+            case 5:
+            {
+                System.out.println("Ha seleccionado Sec");
+                resultado = 1/Math.cos(num1);
+                System.out.println("El resultado de Secante es \t"+resultado);
+                break;
+                
+            }    
+            case 6:
+            {
+                System.out.println("Ha seleccionado Csc");
+                resultado = 1/Math.sin(num1);
+                System.out.println("El resultado de Cosecante es \t"+resultado);
+                break;
+            }    
+        }
+        }
+    
+    
+    
+    }
+}
