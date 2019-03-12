@@ -1,0 +1,82 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package Ejercicios;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+/**
+ *
+ * @author darwi
+ */
+public class ARITMETICA {
+
+    /**
+     * @param args the command line arguments
+     */
+ 
+    static void ARITME()  throws IOException
+    {
+        BufferedReader bf=new BufferedReader(new InputStreamReader (System.in));
+        int operacion;
+        String soperacion,snum1,snum2;
+        double num1,num2,suma,resta,multiplicacion,division,resultado;
+        
+        System.out.println("¿Que opcion desea? \n 1. Si es SUMA \n 2. Si es RESTA \n 3. Si es MULTIPLICACION \n 4. Si es DIVISION");
+        soperacion=bf.readLine();
+        operacion=Integer.parseInt(soperacion);
+        
+        System.out.println("cual es el primer numero");
+        snum1=bf.readLine();
+        num1=Double.parseDouble(snum1);
+        System.out.println("Cual es el segundo numero?");
+        snum2=bf.readLine();
+        num2=Double.parseDouble(snum2);
+      
+        switch (operacion)
+        {
+            case 1:
+            {
+                System.out.println("Ha seleccionado Suma");
+                suma=num1+num2;
+                System.out.println("El resultado de la suma es \t"+suma);
+                break;
+            }
+            case 2:
+            {
+                System.out.println("Ha seleccionado Resta");
+                resta=num1-num2;
+                System.out.println("El resultado de la resta es \t"+resta);
+                break;
+            }
+            case 3:
+            {
+                System.out.println("Ha seleccionado Multiplicacion");
+                multiplicacion=num1*num2;
+                System.out.println("El resultado de la Multiplicacion es \t"+multiplicacion);
+                break;
+            }
+            case 4:
+            {
+                System.out.println("Ha seleccionado Division");
+                if(num2 <= 0)
+                {
+                    System.out.println("Error \n No puede ser 0 \n !Escriba otro numero!");
+                }
+                else
+                {
+                division=num1/num2;
+                System.out.println("El resultado de la division es \t"+division);
+                break;
+                }
+
+            }
+            
+        }
+    }
+    
+}
